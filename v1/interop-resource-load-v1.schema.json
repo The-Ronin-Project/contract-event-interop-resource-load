@@ -18,7 +18,8 @@
     },
     "dataTrigger": {
       "description": "The data trigger context, i.e. 'Nightly'",
-      "type": "string"
+      "type": "string",
+      "enum": ["adhoc", "nightly", "backfill"]
     }
   },
   "required": [
