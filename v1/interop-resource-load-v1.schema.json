@@ -1,0 +1,29 @@
+{
+  "$id": "https://github.com/projectronin/ronin-contract-interop-patient-load/blob/main/v1/interop-resource-load-v1.schema.json",
+  "title": "Interop Resource Load",
+  "description": "This event represents a Resource FHIR ID which needs to be loaded from the EHR.",
+  "type": "object",
+  "properties": {
+    "tenantId": {
+      "description": "The ID of the tenant for which the resource was retrieved",
+      "type": "string"
+    },
+    "resourceFHIRId": {
+      "description": "The FHIR ID associated to this resource.",
+      "type": "string"
+    },
+    "resourceType": {
+      "description": "The type of FHIR Resource, i.e. 'Patient'",
+      "type": "string"
+    },
+    "dataTrigger": {
+      "description": "The data trigger context, i.e. 'Nightly'",
+      "type": "string"
+    }
+  },
+  "required": [
+    "tenantId",
+    "resourceType",
+    "resourceFHIRId"
+  ]
+}
